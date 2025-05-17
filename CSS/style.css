@@ -1,0 +1,15 @@
+/*Rogne img header footer*/
+#imgh {
+    height:500px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+footer img{
+    height:200px;
+    width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: bottom;
+}
