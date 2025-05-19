@@ -13,3 +13,11 @@ footer img{
     object-fit: cover;
     object-position: bottom;
 }
+/*teste pour l'en tête a voir sur la page acceuil*/
+.entete h1 {
+    position: absolute;
+    bottom: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size:80px;
+}
