@@ -15,6 +15,7 @@ footer img{
 }
 
 /* adapter l'entete à la taille de la fenetre*/
+/*problème avec le titre h1 de conséquences */
 .entete h1 {
     position: absolute;
     top: 50%;
