@@ -1,3 +1,40 @@
+/*Tentative d'animation*/
+/* Overlay plein écran */
+#fish-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #003366; /* fond opaque bleu foncé */
+    pointer-events: none;
+    z-index: 9999;
+    display: none;
+    overflow: hidden;
+    user-select: none;
+}
+
+/* poissons : gros et positionnés absolu */
+.fish {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    pointer-events: none;
+    user-select: none;
+    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
+    animation: swim 2s ease-in-out infinite;
+}
+
+@keyframes swim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(10px); }
+}
+.fish svg {
+    width: 100%;
+    height: auto;
+    animation: swim 2s ease-in-out infinite;
+}
+
+
+
 /*Rogne img header footer*/
 #imgh {
     height:500px;
@@ -12,6 +49,9 @@ footer img{
     overflow: hidden;
     object-fit: cover;
     object-position: bottom;
+}
+footer{
+    text-align: center;
 }
 
 /* adapter l'entete à la taille de la fenetre*/
@@ -65,4 +105,12 @@ header nav a {
 
 header nav a:hover {
     background: rgba(255, 255, 255, 0.2);
+}
+/*Style général*/
+section {
+    background-color: rgba(161, 161, 161, 0.5);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    text-justify: inter-word;
 }
