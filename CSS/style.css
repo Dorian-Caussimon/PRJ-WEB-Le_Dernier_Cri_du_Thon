@@ -51,7 +51,7 @@ body {
     object-position: center;
 }
 footer img{
-    height:200px;
+    height:100px;
     width: 100%;
     overflow: hidden;
     object-fit: cover;
@@ -122,4 +122,20 @@ section {
     border-radius: 10px;
     padding: 10px;
     text-justify: inter-word;
+}
+/*Tableaux des especes menacer*/
+table{
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: black;
+    border-collapse: collapse;
+}
+thead{
+    background-color: #61aeff;
+    border: black 5px;
+}
+tr:nth-child(even) {
+    background-color: #90c9ff;
 }
