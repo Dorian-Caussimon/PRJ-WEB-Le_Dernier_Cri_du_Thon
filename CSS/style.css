@@ -20,30 +20,6 @@ body {
     overflow: hidden;
     user-select: none;
 }
-
-/* poissons : gros et positionnés absolu */
-.fish {
-    position: absolute;
-    width: 120px;
-    height: auto;
-    pointer-events: none;
-    user-select: none;
-    filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.6));
-    animation: swim 2s ease-in-out infinite;
-}
-
-@keyframes swim {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-}
-.fish svg {
-    width: 100%;
-    height: auto;
-    animation: swim 2s ease-in-out infinite;
-}
-
-
-
 /*Rogne img header footer*/
 #imgh {
     height:500px;
@@ -52,6 +28,9 @@ body {
     object-fit: cover;
     object-position: center;
 }
+footer{
+    position: relative;
+}
 footer img{
     height:200px;
     width: 100%;
@@ -59,14 +38,16 @@ footer img{
     object-fit: cover;
     object-position: bottom;
 }
-footer{
+footer p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    color : white;
 }
 
 
 /* adapter l'entete à la taille de la fenetre*/
-/*problème avec le titre h1 de conséquences */
 header {
     position: relative;
     width: 100%;
@@ -126,6 +107,19 @@ section {
     text-justify: inter-word;
     color : black;
 }
+div{
+    background-color: rgba(252, 252, 254, 0.5);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    text-justify: inter-word;
+    color : black;
+}
+p a , li a {
+    text-decoration: none;
+    font-style: italic;
+    color: dodgerblue;
+}
 /*Tableaux des especes menacer*/
 table{
     margin: auto;
@@ -141,4 +135,68 @@ thead{
 }
 tr:nth-child(even) {
     background-color: #90c9ff;
+}
+/*Carte*/
+#zoneCarte{
+    height: 400px;
+    width: 1000px;
+    margin: auto;
+    border-radius: 10px;
+
+}
+/*Quiz*/
+fieldset{
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgba(252, 252, 254, 0.5);
+}
+fieldset legend{
+    color: black;
+    padding: 10px;
+    background-color: lightskyblue ;
+    border: solid white 2px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+textarea{
+    resize: none;
+    width: 80%;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 8px;
+}
+.boutonPoisson{
+    position: relative;
+    gap: 10px;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+.Pbouton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
+.boutonPoisson span{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: large;
+    text-shadow: 1px 1px 2px #000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+}
+.boutonPoisson:hover{
+    transform: scale(1.05);
+}
+.poisson{
+    width: 300px;
+    height: auto;
 }

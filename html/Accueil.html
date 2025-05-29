@@ -3,14 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="../img/logo.svg">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/> <!--Pour la carte utilisation de leaflet-->
     <link rel="stylesheet" href="../CSS/style.css">
-    <!--<script src="../JS/Animation.js" defer></script>-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    <script src = "../JS/Carte.js" defer></script> <!--defer permet d'attendre que la page soit charger-->
     <title>Accueil</title>
 </head>
 
 <body>
 
-    <header> 
+    <header>
         <img id="imgh" src="../img/head_foot1.jpg" alt="">
         <h1>Accueil</h1>
         <nav>
@@ -18,37 +25,37 @@
             <a href="./Agir.html">Agir</a>
             <a href="./Conséquence.html">Conséquences</a>
             <a href="./Quiz.html"> Quiz</a>
-            <a href="./Apropos.html">A propos</a>
-        </nav>   
+
+        </nav>
     </header>
     <!--<div id="fish-overlay"></div>-->
     <section>
-        <section>
+        <div>
         <h2>Qu’est-ce que la surpêche ?</h2>
             <p>La surpêche désigne la capture excessive de poissons et d’autres espèces marines à un rythme plus rapide que leur capacité naturelle à se reproduire. Cela provoque l’épuisement des stocks marins, perturbe les écosystèmes, et menace la sécurité alimentaire de millions de personnes dans le monde.</p>
             <p>En quelques décennies, plus de 34 % des stocks mondiaux sont surexploités, selon la FAO. La surpêche n’est pas un phénomène isolé : elle est liée à une forte demande, à des techniques industrielles destructrices, et à un manque de régulation efficace.</p>
             <p>Elle représente également une menace directe pour la biodiversité marine, en mettant en danger <a href="Menacer.html">de nombreuses espèces déjà fragilisées</a>.</p>
-        </section>
-        <section>
+        </div>
+        <div>
             <h2>Types de surpêche</h2>
-            <p>Voici les principales formes de surpêche :</p>
+            <h3>Voici les principales formes de surpêche :</h3>
             <ul>
-                <li>Pêche industrielle : pratiquée à grande échelle par des flottes équipées de chaluts, filets dérivants ou lignes longues. Elle vise la rentabilité, souvent au détriment de l’environnement.</li>
-                <li>Pêche illégale, non déclarée et non réglementée (INN) : échappant aux contrôles, cette pêche viole les quotas, pénètre des zones protégées et contribue fortement à la disparition de certaines espèces.</li>
-                <li>Surpêche artisanale : bien que plus limitée, une forte pression locale peut également menacer certaines espèces côtières.</li>
-                <li>Pêche de loisir (moins fréquente) : dans certains cas, elle contribue localement à la baisse des populations de poissons (surtout dans les zones sensibles).</li>
+                <li><strong>Pêche industrielle </strong>: pratiquée à grande échelle par des flottes équipées de chaluts, filets dérivants ou lignes longues. Elle vise la rentabilité, souvent au détriment de l’environnement.</li>
+                <li><strong>Pêche illégale, non déclarée et non réglementée (INN) </strong>: échappant aux contrôles, cette pêche viole les quotas, pénètre des zones protégées et contribue fortement à la disparition de certaines espèces.</li>
+                <li><strong>Surpêche artisanale</strong> : bien que plus limitée, une forte pression locale peut également menacer certaines espèces côtières.</li>
+                <li><strong>Pêche de loisir (moins fréquente)</strong>  : dans certains cas, elle contribue localement à la baisse des populations de poissons (surtout dans les zones sensibles).</li>
             </ul>
-        </section>
-        <section>
-            <h2>Zone les plus touchées</h2>
-            <p>"Faire une carte avec les zones touchées : image / utilisation de Leaflet.js"</p>
-        </section>
+        </div>
+        <div>
+            <h2>Les Zone les plus touché</h2>
+            <p>Voici un exemple des zones les plus touchées </p>
+            <div id="zoneCarte"></div>
+        </div>
     </section>
 
     <footer>
         <img src="../img/head_foot1.jpg" alt="">
-        <p>©️2025 Dorian Caussimon et Garance Grhilikes.</p>
-        <p>Tous droits réservés.</p>
+        <p>©️2025 Dorian Caussimon et Garance Grhilikes. <a href="./Apropos.html">A propos</a><br>Tous droits réservés.</p>
     </footer>
 </body>
 </html>
