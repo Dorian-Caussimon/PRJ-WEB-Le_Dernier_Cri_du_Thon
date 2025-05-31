@@ -7,6 +7,19 @@ body {
     color: white;
     margin: 0;
 }
+#consquence {
+    background-image: url("../img/Consequence.jpg") ;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+#accueil {
+    background-image: url("../img/head_foot1.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
 
 
 #fish-overlay {
@@ -29,24 +42,9 @@ body {
     object-position: center;
 }
 footer{
-    position: relative;
-}
-footer img{
-    height:200px;
-    width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: bottom;
-}
-footer p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    margin-top: 5%;
 }
-
-
 /* adapter l'entete à la taille de la fenetre*/
 header {
     position: relative;
@@ -127,14 +125,17 @@ table{
     border-radius: 10px;
     padding: 5px;
     border: black;
-    border-collapse: collapse;
+
 }
-thead{
-    background-color: #61aeff;
+thead tr{
+    background-color: #006fff;
     border: black 5px;
 }
-tr:nth-child(even) {
+tbody tr:nth-child(even) {
     background-color: #90c9ff;
+}
+tbody tr:nth-child(odd) {
+    background-color: rgba(252, 252, 254, 0.5);
 }
 /*Carte*/
 #zoneCarte{
@@ -177,7 +178,7 @@ textarea{
     cursor: pointer;
     border: none;
 }
-.Pbouton {
+.PoissonDiv {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,4 +200,7 @@ textarea{
 .poisson{
     width: 300px;
     height: auto;
+}
+#Quiz {
+display: none;
 }

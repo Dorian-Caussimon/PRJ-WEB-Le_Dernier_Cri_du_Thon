@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../JS/Quiz.js"></script>
     <title>Quiz</title>
 </head>
-<body>
+<body id="Pquiz">
 <header>
     <img id="imgh" src="../img/head_foot1.jpg" alt="">
     <h1> Quiz</h1>
@@ -19,7 +19,7 @@
         <a href="./Quiz.html"> Quiz</a>
     </nav>
 </header>
-<form>
+<form id="formQuiz" onsubmit="return false">
     <fieldset id = "Formulaire">
         <legend>Vos informations</legend>
         <div>
@@ -47,8 +47,8 @@
                 <option value="Entrepreneur">Entrepreneur</option>
             </select>
         </div>
-        <div class = "Pbouton">
-            <button class="boutonPoisson">
+        <div class = "PoissonDiv">
+            <button id="Bform" class="boutonPoisson" type="button" onclick="startQuiz()">
                 <img src="../img/Thon.svg" alt="Poisson" class="poisson">
                 <span>Commencer le quiz</span>
             </button>
@@ -87,23 +87,59 @@
         <div>
             <h2>3. Quelles sont les zones principalement touchées par la surpêche ?</h2>
             <label>
-                <textarea></textarea>
+                <textarea id="q3"></textarea>
             </label>
         </div>
-        <div class = "Pbouton">
-            <button class="boutonPoisson">
+        <div>
+            <h2>4. Quels sont les poissons les plus touchés par la surpêche ?</h2>
+
+            <input type="checkbox" id="q5a" name="q5" value="a">
+            <label for="q5a">Thon rouge</label><br>
+
+            <input type="checkbox" id="q5b" name="q5" value="b">
+            <label for="q5b">Saumon Atlantique</label><br>
+
+            <input type="checkbox" id="q5c" name="q5" value="c">
+            <label for="q5c">Cabillaud</label><br>
+
+            <input type="checkbox" id="q5d" name="q5" value="d">
+            <label for="q5d">Poisson-lune</label><br>
+
+            <input type="checkbox" id="q5e" name="q5" value="e">
+            <label for="q5e">Églefin</label><br>
+
+            <input type="checkbox" id="q5f" name="q5" value="f">
+            <label for="q5f">Requin blanc</label><br>
+
+            <input type="checkbox" id="q5g" name="q5" value="g">
+            <label for="q5g">Mérou géant</label><br>
+        </div>
+        <div class = "PoissonDiv">
+            <button class="boutonPoisson" type="submit" onclick="submitQuiz(event)">
                 <img src="../img/Thon.svg" alt="Poisson" class="poisson">
                 <span>Envoyer mes réponse</span>
             </button>
         </div>
     </fieldset>
+    <section>
+        <table id = "resultat">
+            <caption>Résultat du quiz</caption>
+            <thead>
+            <tr>
+                <th>tentative</th>
+                <th>Scores</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
 </form>
 
 
 
 
 <footer>
-    <img src="../img/head_foot1.jpg" alt="">
     <p>©️2025 Dorian Caussimon et Garance Grhilikes. <a href="./Apropos.html">A propos</a><br>Tous droits réservés.</p>
 </footer>
 </body>
