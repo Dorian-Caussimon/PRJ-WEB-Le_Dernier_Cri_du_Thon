@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="../img/logo.svg">
     <link rel="stylesheet" href="../CSS/style.css">
-    <script type="text/javascript" src="../JS/Quiz.js"></script>
+    <script src="../JS/Quiz.js"></script>
     <title>Quiz</title>
 </head>
-<body id="Pquiz">
+<body id="bodyQuiz">
 <header>
-    <img id="imgh" src="../img/head_foot1.jpg" alt="">
+    <img id="imgh" src="../img/Quiz.jpg" alt="">
     <h1> Quiz</h1>
     <nav>
         <a href="./Accueil.html"> Accueil</a>
@@ -23,33 +23,36 @@
     <fieldset id = "Formulaire">
         <legend>Vos informations</legend>
         <div>
-            <label for="nom">Nom :</label>
-            <input type="text" id="nom" name="nom" required>
+            <div class="formulaire">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="formulaire">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="formulaire">
+                <label for="date_naissance">Date de naissance :</label>
+                <input type="date" id="date_naissance" name="date_naissance" required>
+            </div>
+            <div class="formulaire">
+                <label for="mail">Adresse mail :</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+            <div class="formulaire">
+                <label for="statut">Statut :</label>
+                <select id="statut" name="statut" required>
+                    <option value="" disabled selected>Choisissez un statut</option>
+                    <option value="Étudiant">Étudiant</option>
+                    <option value="Développeur">Développeur</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
+                </select>
+            </div>
         </div>
-        <div>
-            <label for="prenom">Prénom :</label>
-            <input type="text" id="prenom" name="prenom" required>
-        </div>
-        <div>
-            <label for="date_naissance">Date de naissance :</label>
-            <input type="date" id="date_naissance" name="date_naissance" required>
-        </div>
-        <div>
-            <label for="mail">Adresse mail :</label>
-            <input type="email" id="mail" name="mail" required>
-        </div>
-        <div>
-            <label for="statut">Statut :</label>
-            <select id="statut" name="statut" required>
-                <option value="" disabled selected>Choisissez un statut</option>
-                <option value="Étudiant">Étudiant</option>
-                <option value="Développeur">Développeur</option>
-                <option value="Entrepreneur">Entrepreneur</option>
-            </select>
-        </div>
+
         <div class = "PoissonDiv">
             <button id="Bform" class="boutonPoisson" type="button" onclick="startQuiz()">
-                <img src="../img/Thon.svg" alt="Poisson" class="poisson">
+                <img src="../img/ThonBouton.svg" alt="Poisson" class="poisson">
                 <span>Commencer le quiz</span>
             </button>
         </div>
@@ -116,23 +119,23 @@
         </div>
         <div class = "PoissonDiv">
             <button class="boutonPoisson" type="submit" onclick="submitQuiz(event)">
-                <img src="../img/Thon.svg" alt="Poisson" class="poisson">
+                <img src="../img/ThonBouton.svg" alt="Poisson" class="poisson">
                 <span>Envoyer mes réponse</span>
             </button>
         </div>
     </fieldset>
-    <section>
+    <div>
         <table id = "resultat">
             <caption>Résultat du quiz</caption>
             <thead>
             <tr>
-                <th>tentative</th>
+                <th>Tentative</th>
                 <th>Scores</th>
             </tr>
             </thead>
             <tbody></tbody>
         </table>
-    </section>
+    </div>
 
 </form>
 

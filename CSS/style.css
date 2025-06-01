@@ -7,32 +7,38 @@ body {
     color: white;
     margin: 0;
 }
-#consquence {
-    background-image: url("../img/Consequence.jpg") ;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
-}
+/*Img background*/
 #accueil {
-    background-image: url("../img/head_foot1.jpg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background: url("../img/accueil.jpg") no-repeat center center fixed;/*permet d'éviter le surplus de ligne et permet a l'image de rester fixer au fond du site*/
+    height: 100%;
+    background-size: cover;
+}
+#consquence {
+    background: url("../img/consequence.jpg") no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+}
+#agir {
+    background: url("../img/Drapeau_Sea_Shepherd.svg.png") no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+}
+#bodyQuiz{
+    background: url("../img/Quiz.jpg") no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+}
+#menacer{
+    background: url("../img/menacer.png") no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
+}
+#apropos{
+    background: url("../img/apropos.jpg") no-repeat center center fixed;
+    height: 100%;
+    background-size: cover;
 }
 
-
-#fish-overlay {
-    position: fixed;
-    top: 0; left: 0;
-    width: 100vw; height: 100vh;
-    background: #003366; /* fond opaque bleu foncé */
-    pointer-events: none;
-    z-index: 9999;
-    display: none;
-    overflow: hidden;
-    user-select: none;
-}
 /*Rogne img header footer*/
 #imgh {
     height:500px;
@@ -44,6 +50,7 @@ body {
 footer{
     text-align: center;
     margin-top: 5%;
+    text-shadow: 2px 2px 5px black;
 }
 /* adapter l'entete à la taille de la fenetre*/
 header {
@@ -118,14 +125,34 @@ p a , li a {
     font-style: italic;
     color: dodgerblue;
 }
-/*Tableaux des especes menacer*/
+/*Tableaux*/
+#tabmenacer{
+    width: 80%;
+}
+#tabmenacer tbody tr td:nth-child(2) {
+    font-weight: bold;
+}
 table{
     margin: auto;
     text-align: center;
-    border-radius: 10px;
+    background-color: rgba(252, 252, 254, 0.5);
+    border-collapse: collapse;
+}
+td, th{
     padding: 5px;
-    border: black;
-
+}
+table img {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+table caption{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 thead tr{
     background-color: #006fff;
@@ -137,6 +164,7 @@ tbody tr:nth-child(even) {
 tbody tr:nth-child(odd) {
     background-color: rgba(252, 252, 254, 0.5);
 }
+
 /*Carte*/
 #zoneCarte{
     height: 400px;
@@ -203,4 +231,34 @@ textarea{
 }
 #Quiz {
 display: none;
+}
+.formulaire{
+    position: relative;
+    background: none;
+    padding: 5px;
+}
+.formulaire input, .formulaire select{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    box-sizing: border-box;
+    border: lightskyblue;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+.formulaire label{
+    font-weight: bold ;
+}
+#resultat{
+    border-collapse:collapse;
+    width: 60%;
+    padding: 10px;
+}
+#resultat th, #resultat td{
+    padding: 5px;
+    width: 70px;
 }
